@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@400;700&display=swap");
+
+.container {
+  display: flex;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  color: #ffffff;
+  margin-top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  font-family: "Merriweather", serif;
+  font-size: 14px;
+  color: #eaeaea;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.welcome,
+.form {
+  padding-top: 32px;
+  width: 50%;
+}
+
+.welcome {
+  background-color: #585858;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.welcome img {
+  height: 26px;
+  width: 177px;
+  margin: 32px 0;
+}
+
+.form {
+  padding-left: 24px;
+  margin-top: 102px;
+}
+
+label {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Merriweather", serif;
+  color: #666666;
+}
+
+span {
+  color: #e70000;
+}
+
+input {
+  display: block;
+  padding-left: 16px;
+  height: 48px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  width: 376px;
+  font-family: "Roboto", sans-serif;
+  background-color: #f7f7f7;
+  color: #666666;
+  margin-bottom: 24px;
+}
+
+.filled,
+input:focus {
+  background-color: #ffffff;
+  border: 1px solid #00adee;
+  outline: none;
+}
+
+.input--error {
+  background-color: #ffffff;
+  border: 1px solid #e70000;
+  outline: none;
+}
+
+button {
+  background-color: #ffab44;
+  border-radius: 6px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px 24px;
+  margin-top: 48px;
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button img {
+  margin-left: 8px;
+  height: 10px;
+  width: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .welcome,
+  .form {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  input {
+    width: calc(100% - 48px);
+  }
+  button {
+    width: calc(100% - 28px);
+  }
+
+  .welcome {
+    padding: 0 0 18px 16px;
+    align-items: flex-start;
+  }
+
+  .form {
+    margin: 32px 0 0 0;
+    padding-left: 16px;
+  }
+  .input {
+    margin: 0 auto 24px auto;
   }
 }
